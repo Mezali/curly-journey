@@ -1,62 +1,65 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
-    <title>SISTEMA</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 </head>
 
 <body>
-
-    <!-- Nav tabs -->
     <nav class="navbar navbar-expand-lg navbar-light bg-white shadow">
-        <a class="navbar-brand">
-            <img src="../img/ticket.png" width="50" height="50">
-        </a>
-
-        <div class="collapse navbar-collapse">
-            <ul class="navbar-nav mr-auto">
+        <a class="navbar-brand"><img src="../img/ticket.png" width="60px" alt=""></a>
+        <button class="navbar-toggler" data-target="#my-nav" data-toggle="collapse" aria-controls="my-nav"
+            aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div id="my-nav" class="collapse navbar-collapse">
+            <ul class="navbar-nav mr-auto ">
                 <li class="nav-item">
-                    <a class="nav-link" href="sistema.html"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
+                    <a class="nav-link" href="#"><i class="fa fa-home" aria-hidden="true"></i> Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="./tipo/view/list-tipo.html"><i class="fa fa-user"
-                            aria-hidden="true"></i>Tipos Usuários</a>
+                    <a class="nav-link" href="#"><i class="fa fa-money" aria-hidden="true"></i> Vendedores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-money" aria-hidden="true"></i> Promoção</a>
+                    <a class="nav-link" href="#"><i class="fa fa-user" aria-hidden="true"></i> Compradores</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#"><i class="fa fa-cart-plus" aria-hidden="true"></i> Prêmio</a>
+                    <a class="nav-link" href="./tipo/view/list-tipo.html"><i class="fa fa-user-md"
+                            aria-hidden="true"></i> Tipo Usuarios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-percent" aria-hidden="true"></i> Promoção</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><i class="fa fa-trophy" aria-hidden="true"></i> Premio</a>
                 </li>
             </ul>
-            <a class="nav-link text-dark" href="#"><i class="fa fa-sign-out" aria-hidden="true"></i> Sair do Sistema</a>
+            <a href="" class="nav-link"><i class="fa fa-arrow-right" aria-hidden="true"></i> Sair</a>
         </div>
     </nav>
 
-
-    <div class="container mt-5">
+    <div id="content" class="container mt-5">
         <div class="row mt-5">
             <div class="col-12 text-center mt-5">
-                <h4 c lass="text-center text-warning">
-                    Bem vindo ao sistema gerenciador de rifas
+                <h4 class="text-center text-warning">
+                    Bem vindo ao sistema de gerenciamento de rifas
                 </h4>
-                <img src="../img/ticket.png" alt="ticket" class="img-fluid">
+                <img src="../img/ticket.png" alt="e-rifas" class="img-fluid">
             </div>
         </div>
     </div>
 
     <script src="../libs/jquery-3.6.0.js"></script>
     <script src="../js/bootstrap.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script src="../libs/DataTables/datatables.js"></script>
-    <script src="../libs/sweetAlert/dist/sweetalert2.all.js"></script>
     <script src="../js/menu.js"></script>
+    <script src="../libs/sweetAlert/dist/sweetalert2.all.js"></script>
+    <script src="../libs/DataTables/datatables.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
 </body>
 
 </html>

@@ -7,13 +7,13 @@ $(document).ready(function() {
         let ID = `ID=${$(this).attr('id')}`
 
         Swal.fire({
-            title: 'Sistema de rifas',
-            text: "Deseja realmente excluir esse registro?",
+            title: 'e-Rifa',
+            text: 'Deseja realmente excluir esse registro?',
             icon: 'question',
             showCancelButton: true,
             confirmButtonText: 'Sim',
             cancelButtonText: 'Não'
-        }).then((result) => {
+        }).then((result => {
             if (result.value) {
 
                 $.ajax({
@@ -21,10 +21,10 @@ $(document).ready(function() {
                     dataType: 'json',
                     assync: true,
                     data: ID,
-                    url: 'src/tipo/model/delete-tipo.php',
+                    url: 'src/tipo/modelo/delete-tipo.php',
                     success: function(dados) {
                         Swal.fire({
-                            title: 'Sistema de Rifas',
+                            title: 'e-Rifa',
                             text: dados.mensagem,
                             icon: dados.tipo,
                             confirmButtonText: 'OK'
@@ -33,9 +33,8 @@ $(document).ready(function() {
                         $('#table-tipo').DataTable().ajax.reload()
                     }
                 })
-
-
             }
-        })
+        }))
+
     })
 })

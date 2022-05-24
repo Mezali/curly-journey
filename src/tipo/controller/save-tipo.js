@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-    $('.close, #close').click(function(e) {
-        e.preventDefault()
-        $('#modal-tipo').modal('hide')
-    })
-
     $('.btn-save').click(function(e) {
         e.preventDefault()
 
@@ -17,10 +12,10 @@ $(document).ready(function() {
             dataType: 'json',
             assync: true,
             data: dados,
-            url: 'src/tipo/model/save-tipo.php',
+            url: 'src/tipo/modelo/save-tipo.php',
             success: function(dados) {
                 Swal.fire({
-                    title: 'Sistema de rifas',
+                    title: 'e-Rifa',
                     text: dados.mensagem,
                     icon: dados.tipo,
                     confirmButtonText: 'OK'

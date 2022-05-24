@@ -4,8 +4,6 @@ $(document).ready(function() {
 
         e.preventDefault()
 
-        // Alterar as informações do modal para apresentação dos dados
-
         $('.modal-title').empty()
         $('.modal-body').empty()
 
@@ -18,20 +16,20 @@ $(document).ready(function() {
             dataType: 'json',
             assync: true,
             data: ID,
-            url: 'src/tipo/model/view-tipo.php',
+            url: 'src/tipo/modelo/view-tipo.php',
             success: function(dado) {
                 if (dado.tipo == "success") {
-                    $('.modal-body').load('src/tipo/view/form-tipo.html', function() {
+                    $('.modal-body').load('src/tipo/visao/form-tipo.html', function() {
                         $('#NOME').val(dado.dados.NOME)
                         $('#NOME').attr('readonly', 'true')
                     })
                     $('.btn-save').hide()
                     $('#modal-tipo').modal('show')
                 } else {
-                    Swal.fire({ // Inicialização do SweetAlert
-                        title: 'e-Rifa', // Título da janela SweetAler
-                        text: dado.mensagem, // Mensagem retornada do microserviço
-                        type: dado.tipo, // Tipo de retorno [success, info ou error]
+                    Swal.fire({
+                        title: 'e-Rifa',
+                        text: dado.mensagem,
+                        type: dado.tipo,
                         confirmButtonText: 'OK'
                     })
                 }

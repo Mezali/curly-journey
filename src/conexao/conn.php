@@ -1,12 +1,15 @@
 <?php
 
-$HOSTNAME = "sql102.epizy.com";
-$DATABASE = "epiz_31454912_bancao";
-$USERNAME = "epiz_31454912";
-$PASSWORD = "qMEm43eEaP7L";
+$HOSTNAME = "localhost";
+$DATABASE = "bancao";
+$USERNAME = "root";
+$PASSWORD = "";
 
-if ($CONECTA = mysqli_connect($HOSTNAME, $USERNAME, $PASSWORD, $DATABASE) ) {
-    echo "BANCO CONECTADO!";
-}else{
-    echo "ERRO: ".mysqli_connect_error();
-}
+try {
+    $pdo = new PDO("mysql:host=$HOSTNAME;dbname=bancao", $USERNAME, $PASSWORD);
+    // set the PDO error mode to exception
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    //echo "Connected successfully";
+  } catch(PDOException $e) {
+    echo "Connection failed: " . $e->getMessage();
+  }
